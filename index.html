@@ -12,9 +12,6 @@
 
     <div class="noise"></div>
 
-    <!-- ============================================================
-         NAV — Change the site name/logo here
-         ============================================================ -->
     <header>
       <nav>
         <div class="nav-brand">
@@ -32,10 +29,7 @@
         </div>
       </nav>
     </header>
-
-    <!-- ============================================================
-         HERO — Change the heading and description text here
-         ============================================================ -->
+    
     <section class="hero">
       <div class="hero-bg-grid"></div>
       <div class="t-text">
@@ -66,85 +60,14 @@
     </div>
 
 
-    <!-- ================================================================
-      ★  HOW TO ADD A NEW 3D MODEL  ★
-      ================================================================
-
-      STEP 1 — Find the right category block below (Engineering,
-               Astronomy, Biology) or create a new one (see bottom).
-
-      STEP 2 — Inside that category's <div class="main-structur">,
-               look for the comment that says:
-               "ADD NEW ___ MODELS HERE"
-               and paste the following template just above it:
-
-      ┌──────────────────────────────────────────────────────────────┐
-      │  <div class="ar-card">                                       │
-      │    <div class="card-label">YOUR MODEL NAME</div>             │
-      │    <!-- ★ TAP-TO-INTERACT OVERLAY — always include this -->  
-      <!--  
-      │    <div class="interact-overlay">                            │
-      │      <button class="interact-btn">⟳ Tap to Interact</button>│
-      │    </div>                                                     │
-      │    <model-viewer                                             │
-      │      src="YOUR_FOLDER/YOUR_FILE.glb"                        │
-      │      ios-src="YOUR_FOLDER/YOUR_FILE.usdz"                   │
-      │      ar                                                      │
-      │      ar-modes="webxr scene-viewer quick-look"               │
-      │      camera-controls                                         │
-      │      tone-mapping="neutral"                                  │
-      │      poster="YOUR_FOLDER/poster.png"                        │
-      │      shadow-intensity="1"                                    │
-      │      auto-rotate>                                            │
-      │                                                              │
-      │       OPTIONAL: Add hotspot annotation buttons.         │
-      │           Get position/normal values from:                   │
-      │           https://modelviewer.dev/editor                     │
-      │                                                              │
-      │      <button class="Hotspot"                                │
-      │        slot="hotspot-1"                                      │
-      │        data-position="X Y Z"                                │
-      │        data-normal="X Y Z"                                   │
-      │        data-visibility-attribute="visible">                  │
-      │        <div class="HotspotAnnotation">Label</div>           │
-      │      </button>                                               │
-                                                          
-      │                                                              │
-      │      <div class="progress-bar hide" slot="progress-bar">    │
-      │        <div class="update-bar"></div>                        │
-      │      </div>                                                  │
-      │      <button slot="ar-button" class="ar-button">            │
-      │        View in your space                                    │
-      │      </button>                                               │
-      │      <div id="ar-prompt">                                    │
-      │        <img src="ar_hand_prompt.png" alt="ar prompt">       │
-      │      </div>                                                  │
-      │    </model-viewer>                                           │
-      │  </div>                                                      │
-      └──────────────────────────────────────────────────────────────┘ -->
-
-      <!-- STEP 3 — Place your .glb, .usdz, and poster.png files inside a
-               folder in your project root.
-               Example: /solar_system/solar_system.glb
-
-      STEP 4 — Done! The card appears automatically in the grid.
-
-      ================================================================ --> 
-
-
-    <!-- ================================================================
-         CATEGORY: ENGINEERING
-         Current models: Lamborghini, Orthographic Part, Bolt Cutters,
-                         Gear, Planetary Gear System
-         ================================================================ -->
     <div class="category-block">
       <div class="category-tag cat-engineering">⚙ Engineering</div>
       <div class="main-structur">
 
-        <!-- MODEL 01 — Lamborghini Aventador -->
+      
         <div class="ar-card">
           <div class="card-label">Lamborghini Aventador</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+         
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -161,10 +84,10 @@
           </model-viewer>
         </div>
 
-        <!-- MODEL 02 — Orthographic Part -->
+       
         <div class="ar-card">
           <div class="card-label">Orthographic Part</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -181,10 +104,10 @@
           </model-viewer>
         </div>
 
-        <!-- MODEL 03 — Bolt Cutters -->
+       
         <div class="ar-card">
           <div class="card-label">Bolt Cutters</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+       
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>

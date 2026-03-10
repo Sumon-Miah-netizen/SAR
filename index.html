@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>SAR — Scan. Augment. Reality.</title>
+    <meta charset="utf-8">
+    <meta name="description" content="SAR — Interactive 3D & AR learning for students">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+
+    <div class="noise"></div>
+
+    <!-- ============================================================
+         NAV — Change the site name/logo here
+         ============================================================ -->
+    <header>
+      <nav>
+        <div class="nav-brand">
+          <img class="SAR" src="SAR.png" alt="SAR logo">
+          <!-- <span class="nav-wordmark">SAR</span> -->
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#models">AR Models</a></li>
+        </ul>
+        <div class="nav-indicator">
+          <span class="live-dot"></span>
+          <span class="live-label">WebXR Ready</span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ============================================================
+         HERO — Change the heading and description text here
+         ============================================================ -->
+    <section class="hero">
+      <div class="hero-bg-grid"></div>
+      <div class="t-text">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-tag">Open Source</span>
+          <span class="eyebrow-divider">·</span>
+          <span class="eyebrow-tag">GitHub Pages</span>
+          <span class="eyebrow-divider">·</span>
+          <span class="eyebrow-tag">WebXR</span>
+        </div>
+        <h1 id="head-text">The Classroom Has <br><em>No Walls</em></h1>
+        <p id="sub-text">Explore 3D models of biology, physics, engineering, and astronomy. Point your phone at any surface and watch science come alive — no app required.</p>
+        <div class="hero-actions">
+          <a href="#models" class="btn-explore">Explore Models ↓</a>
+          <a href="#" class="btn-ghost">View on GitHub</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <div class="section-header" id="models">
+      <div class="section-rule"></div>
+      <span class="section-label">3D · AR Models</span>
+      <div class="section-rule"></div>
+    </div>
+
+
+    <!-- ================================================================
+      ★  HOW TO ADD A NEW 3D MODEL  ★
+      ================================================================
+
+      STEP 1 — Find the right category block below (Engineering,
+               Astronomy, Biology) or create a new one (see bottom).
+
+      STEP 2 — Inside that category's <div class="main-structur">,
+               look for the comment that says:
+               "ADD NEW ___ MODELS HERE"
+               and paste the following template just above it:
+
+      ┌──────────────────────────────────────────────────────────────┐
+      │  <div class="ar-card">                                       │
+      │    <div class="card-label">YOUR MODEL NAME</div>             │
+      │    <!-- ★ TAP-TO-INTERACT OVERLAY — always include this -->  
+      <!--  
+      │    <div class="interact-overlay">                            │
+      │      <button class="interact-btn">⟳ Tap to Interact</button>│
+      │    </div>                                                     │
+      │    <model-viewer                                             │
+      │      src="YOUR_FOLDER/YOUR_FILE.glb"                        │
+      │      ios-src="YOUR_FOLDER/YOUR_FILE.usdz"                   │
+      │      ar                                                      │
+      │      ar-modes="webxr scene-viewer quick-look"               │
+      │      camera-controls                                         │
+      │      tone-mapping="neutral"                                  │
+      │      poster="YOUR_FOLDER/poster.png"                        │
+      │      shadow-intensity="1"                                    │
+      │      auto-rotate>                                            │
+      │                                                              │
+      │       OPTIONAL: Add hotspot annotation buttons.         │
+      │           Get position/normal values from:                   │
+      │           https://modelviewer.dev/editor                     │
+      │                                                              │
+      │      <button class="Hotspot"                                │
+      │        slot="hotspot-1"                                      │
+      │        data-position="X Y Z"                                │
+      │        data-normal="X Y Z"                                   │
+      │        data-visibility-attribute="visible">                  │
+      │        <div class="HotspotAnnotation">Label</div>           │
+      │      </button>                                               │
+                                                          
+      │                                                              │
+      │      <div class="progress-bar hide" slot="progress-bar">    │
+      │        <div class="update-bar"></div>                        │
+      │      </div>                                                  │
+      │      <button slot="ar-button" class="ar-button">            │
+      │        View in your space                                    │
+      │      </button>                                               │
+      │      <div id="ar-prompt">                                    │
+      │        <img src="ar_hand_prompt.png" alt="ar prompt">       │
+      │      </div>                                                  │
+      │    </model-viewer>                                           │
+      │  </div>                                                      │
+      └──────────────────────────────────────────────────────────────┘ -->
+
+      <!-- STEP 3 — Place your .glb, .usdz, and poster.png files inside a
+               folder in your project root.
+               Example: /solar_system/solar_system.glb
+
+      STEP 4 — Done! The card appears automatically in the grid.
+
+      ================================================================ --> 
+
+
+    <!-- ================================================================
+         CATEGORY: ENGINEERING
+         Current models: Lamborghini, Orthographic Part, Bolt Cutters,
+                         Gear, Planetary Gear System
+         ================================================================ -->
+    <div class="category-block">
+      <div class="category-tag cat-engineering">⚙ Engineering</div>
+      <div class="main-structur">
+
+        <!-- MODEL 01 — Lamborghini Aventador -->
+        <div class="ar-card">
+          <div class="card-label">Lamborghini Aventador</div>
+          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            src="Lamborginhi_Aventador_test/Lamborginhi_Aventador_test.glb"
+            ios-src="Lamborginhi_Aventador_test/Lamborginhi_Aventador_test.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="Lamborginhi_Aventador_test/poster.png"
+            shadow-intensity="1" auto-rotate>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+        <!-- MODEL 02 — Orthographic Part -->
+        <div class="ar-card">
+          <div class="card-label">Orthographic Part</div>
+          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            src="Orthographic/Part Studio 1.gltf.glb"
+            ios-src="Orthographic/Part Studio 1.gltf.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="Orthographic/poster.png"
+            shadow-intensity="1" auto-rotate>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+        <!-- MODEL 03 — Bolt Cutters -->
+        <div class="ar-card">
+          <div class="card-label">Bolt Cutters</div>
+          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            src="bolt_cutters\bolt_cutters_01_2k.gltf_bolt_cutters_01_2k.glb"
+            ios-src="bolt_cutters/bolt_cutters_01_2k.gltf_bolt_cutters_01_2k.glb.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="bolt_cutters/poster.png"
+            shadow-intensity="1" auto-rotate>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+        <!-- MODEL 04 — Gear -->
+        <div class="ar-card">
+          <div class="card-label">Gear Anatomy</div>
+          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            src="Gear\gear.glb"
+            ios-src="Gear\ImageToStl.com_gear.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="Gear\poster.png"
+            shadow-intensity="0.91" shadow-softness="0.5" auto-rotate>
+            <button class="Hotspot" slot="hotspot-1" data-position="0.04425783833475548m 0.012954706323061073m 0.08134563474189796m" data-normal="0.4792475044651091m -5.02763036415679e-7m 0.8776797989379228m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Top Land</div></button>
+            <button class="Hotspot" slot="hotspot-3" data-position="-0.06633507040500639m 0.009775162775733346m -0.04974062559505994m" data-normal="-0.8005421154710515m 4.4860195756930433e-7m -0.599276498251794m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Bottom Land</div></button>
+            <button class="Hotspot" slot="hotspot-5" data-position="-0.07832440105142868m 0.007379406251268223m -0.04650466885217278m" data-normal="0.05337977197909999m 5.720153146134609e-7m -0.9985742836379936m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Face</div></button>
+            <button class="Hotspot" slot="hotspot-6" data-position="0.08033299605014083m 0.007611275257247744m -0.022411010037545212m" data-normal="0.7197171701318145m -5.197095875625265e-7m 0.6942673800613008m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Flank</div></button>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+        <!-- MODEL 05 — Planetary Gear System -->
+        <div class="ar-card">
+          <div class="card-label">Planetary Gear System</div>
+          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            src="planetary gear\Planetary_Gear_System.gltf"
+            ios-src="planetary gear\Planetary_Gear_System.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="planetary gear\poster.png"
+            shadow-intensity="1" auto-rotate>
+            <button class="Hotspot" slot="hotspot-1" data-position="0.028734376622942086m 0.01244163869348728m 0.004999999888241291m" data-normal="-3.4448436352960845e-17m 4.35533230024573e-17m 1m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Ring Gear</div></button>
+            <button class="Hotspot" slot="hotspot-2" data-position="-0.01326257073980916m 0.022200298695265984m 0.004999999888241295m" data-normal="-2.2179999911289586e-16m -5.153533262688453e-16m 1m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Planet Gear</div></button>
+            <button class="Hotspot" slot="hotspot-3" data-position="0.0007880185299071717m 0.005767034112288454m 0.00499999988824129m" data-normal="6.979621336323284e-17m 1.0445180496014573e-16m 1m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Sun Gear</div></button>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+        <!-- ↓↓↓ ADD NEW ENGINEERING MODELS HERE ↓↓↓ -->
+
+      </div><!-- end Engineering grid -->
+    </div><!-- end Engineering category -->
+
+
+    <!-- ================================================================
+         CATEGORY: ASTRONOMY
+         Current models: Moon, Mars, Mars Curiosity Rover
+         ================================================================ -->
+    <div class="category-block">
+      <div class="category-tag cat-astronomy">✦ Astronomy</div>
+      <div class="main-structur">
+
+        <!-- MODEL 06 — The Moon -->
+        <div class="ar-card">
+          <div class="card-label">The Moon</div>
+          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            src="Moon/moon.glb"
+            ios-src="Moon\moon.glb.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="Moon\poster.png"
+            shadow-intensity="1" auto-rotate>
+            <button class="Hotspot" slot="hotspot-2" data-position="61.475367685619275m 72.85213133295454m 29.663247519448156m" data-normal="0.5890447065937424m 0.7517410510378831m 0.2964991160498638m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Moon Maiden</div></button>
+            <button class="Hotspot" slot="hotspot-4" data-position="97.57283808654005m -20.3253370191205m -4.893134113213194m" data-normal="0.9781393346407589m -0.19503211213065114m -0.07215204270421637m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Face in Albategnius</div></button>
+            <button class="Hotspot" slot="hotspot-5" data-position="63.651571739579225m -76.56191029134827m 6.914637586484755m" data-normal="0.6544993013280024m -0.7517407689102995m 0.08072472309837124m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Eyes of Clavius</div></button>
+            <button class="Hotspot" slot="hotspot-6" data-position="98.6692004030554m 14.963961113634634m -3.873347253089833m" data-normal="0.9805012470979941m 0.19503317702891265m -0.024069987480000134m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Lunar V</div></button>
+            <button class="Hotspot" slot="hotspot-7" data-position="36.881381435530095m -9.43098046749785m 92.26058433748312m" data-normal="0.35912446185309693m -0.06537764223743288m 0.9309969843099375m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Grimaldi (crater)</div></button>
+            <button class="Hotspot" slot="hotspot-8" data-position="78.8663253092073m -27.81526401069793m -54.57978392777556m" data-normal="0.7742190901269448m -0.3213533975028815m -0.5452676355665727m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Mare Nectaris</div></button>
+            <button class="Hotspot" slot="hotspot-9" data-position="97.09554340451729m 21.183828164779403m -9.043109282494704m" data-normal="0.9781390904937612m 0.1950333176399539m -0.07215209392935583m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Mare Vaporum</div></button>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+        <!-- MODEL 07 — Mars -->
+        <div class="ar-card">
+          <div class="card-label">Mars</div>
+          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            src="Mars\Mars.glb"
+            ios-src="Mars/Mars.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="Mars\poster.png"
+            shadow-intensity="1" auto-rotate>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+        <!-- MODEL 08 — Mars Curiosity Rover -->
+        <div class="ar-card">
+          <div class="card-label">Mars Curiosity Rover</div>
+          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            src="Mars_Curiosity_Rover\Mars_Curiosity_Rover.glb"
+            ios-src="Mars_Curiosity_Rover/Mars_Curiosity_Rover.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="Mars_Curiosity_Rover/poster.png"
+            shadow-intensity="1" auto-rotate>
+            <button class="Hotspot" slot="hotspot-1" data-position="-0.4506194810013565m 2.2104937250056764m 0.6085396039740741m" data-normal="0m 1m 0m" data-visibility-attribute="visible"><div class="HotspotAnnotation">ChemCam</div></button>
+            <button class="Hotspot" slot="hotspot-2" data-position="-0.6070079327195823m 1.9710507373193666m 0.8192893608938148m" data-normal="-0.997809904657154m -0.000003275050124371988m 0.06614676225905128m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Mastcam</div></button>
+            <button class="Hotspot" slot="hotspot-3" data-position="-0.7063850300152501m 1.5352776501135943m 0.6321501369298093m" data-normal="-0.48958109383398196m -0.3826822307320726m 0.7834951581485697m" data-visibility-attribute="visible"><div class="HotspotAnnotation">REMS</div></button>
+            <button class="Hotspot" slot="hotspot-4" data-position="-0.47546371744553523m 1.7836160498877138m -1.2363300168293594m" data-normal="0.19509443742258678m -2.3481298710135613e-7m -0.9807844617889852m" data-visibility-attribute="visible"><div class="HotspotAnnotation">RUHF Antenna</div></button>
+            <button class="Hotspot" slot="hotspot-5" data-position="0.007080815455289546m 1.4814678882589845m -1.4279203855169589m" data-normal="-3.701296288939615e-7m 0.500001816187584m -0.8660243552054299m" data-visibility-attribute="visible"><div class="HotspotAnnotation">MMRTG</div></button>
+            <button class="Hotspot" slot="hotspot-6" data-position="0.4153028120989696m 1.399664517319354m -0.24791553977896474m" data-normal="-5.653029741498647e-7m 0.9999999999998391m 4.945841303875482e-8m" data-visibility-attribute="visible"><div class="HotspotAnnotation">High Gain Antenna</div></button>
+            <button class="Hotspot" slot="hotspot-7" data-position="0.5003441012448293m 1.5558014725131375m -0.9707810733652174m" data-normal="0.12417267119807579m 0.6082226766782395m 0.7839938286121215m" data-visibility-attribute="visible"><div class="HotspotAnnotation">RLGA Antenna</div></button>
+            <button class="Hotspot" slot="hotspot-8" data-position="0.41320953021685447m 0.9435555509951886m 2.1173869893679127m" data-normal="-0.9659167242769141m 0.004873060444908363m 0.25880713870381655m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Robotic Arm</div></button>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+        <!-- ↓↓↓ ADD NEW ASTRONOMY MODELS HERE ↓↓↓ -->
+
+      </div><!-- end Astronomy grid -->
+    </div><!-- end Astronomy category -->
+
+
+    <!-- ================================================================
+         CATEGORY: BIOLOGY
+         Current models: Elephant Bone Structure, Human Brain, Bull Skull,
+                         Coronavirus, Human Skull, T-Rex Skull
+         ================================================================ -->
+    <div class="category-block">
+      <div class="category-tag cat-biology">⬡ Biology</div>
+      <div class="main-structur">
+
+        <!-- MODEL 09 — Elephant Bone Structure -->
+        <div class="ar-card">
+          <div class="card-label">Elephant Bone Structure</div>
+          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            src="elephant_bone_structure\elephant_bone_structure.glb"
+            ios-src="elephant_bone_structure\elephant_bone_structure.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="elephant_bone_structure\poster.png"
+            shadow-intensity="1" auto-rotate>
+            <button class="Hotspot" slot="hotspot-2" data-position="-0.46328933924473736m 1.9550935209199904m 16.076025605337584m" data-normal="0.46717431133685683m 0.6146114733940041m -0.6356106509486645m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Tusk</div></button>
+            <button class="Hotspot" slot="hotspot-3" data-position="-0.168273421119232m 3.097798106023153m 16.767893228795003m" data-normal="-0.4053463140303965m 0.6004551546412746m -0.6893097801182675m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Cranium with upper third molars</div></button>
+            <button class="Hotspot" slot="hotspot-4" data-position="-0.39995739482590853m 1.8252432059958204m 17.703304358048825m" data-normal="-0.8533385711051471m -0.06629408788529441m 0.5171251076632063m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Humerus</div></button>
+            <button class="Hotspot" slot="hotspot-5" data-position="0.30872490572919786m 0.7729509826738792m 18.007614432546195m" data-normal="-0.6422411207374272m 0.04988177549771174m 0.7648778669219876m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Ulna</div></button>
+            <button class="Hotspot" slot="hotspot-6" data-position="-0.5044754632071254m 1.6389123661776053m 19.944410184769758m" data-normal="-0.42686963621259755m -0.4053315045891664m 0.8083864701163718m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Femur</div></button>
+            <button class="Hotspot" slot="hotspot-7" data-position="0.49584929112244414m 2.669649958499402m 18.65153699725468m" data-normal="0.8191681134114502m 0.02157352650770598m -0.5731476118103843m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Ribs</div></button>
+            <button class="Hotspot" slot="hotspot-8" data-position="0.5223303832658467m 0.6439067229904811m 20.503115702311604m" data-normal="0.8103459168205236m 0.04204617982685704m 0.584441283495847m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Tibia</div></button>
+            <button class="Hotspot" slot="hotspot-9" data-position="-0.42000914966930336m 2.336817921239004m 20.015089266340997m" data-normal="-0.4674827673286367m 0.5001143147414769m 0.728934519995742m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Pelvis</div></button>
+            <button class="Hotspot" slot="hotspot-10" data-position="0.005962916733738902m 3.0044026727529762m 19.117791543519413m" data-normal="-0.9829095210972257m 0.183438387110728m 0.015467109317422607m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Lumbar Vertebrae</div></button>
+            <button class="Hotspot" slot="hotspot-11" data-position="0.00817092949147049m 3.1544067043203783m 18.241933433092274m" data-normal="-0.9421044951020231m -0.12043640665427317m 0.3129443916429387m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Thoracic Vertebrae</div></button>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+        <!-- MODEL 10 — Human Brain Anatomy -->
+        <div class="ar-card">
+          <div class="card-label">Human Brain Anatomy</div>
+          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            src="brain_anatomy\Human_Brain.glb"
+            ios-src="brain_anatomy/Human_Brain.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="brain_anatomy\poster.png"
+            shadow-intensity="1" auto-rotate>
+            <button class="Hotspot" slot="hotspot-1" data-position="0.20871223451699317m 0.2894426348167174m -0.5030115540051812m" data-normal="0.48610776086542223m 0.5644580504434253m -0.6671479252130018m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Frontal lobe</div></button>
+            <button class="Hotspot" slot="hotspot-2" data-position="0.3131730339818912m 0.41504468727264276m 0.24408764965592344m" data-normal="0.634549142216765m 0.7480142178925606m 0.1944790887024842m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Parietal lobe</div></button>
+            <button class="Hotspot" slot="hotspot-4" data-position="-0.21254017766264177m 0.07882396992173424m 0.5486875851983362m" data-normal="-0.4822566967205589m 0.2749428295276776m 0.8317661443936568m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Occipital lobe</div></button>
+            <button class="Hotspot" slot="hotspot-5" data-position="-0.3669760707197238m -0.17609813094355042m 0.2925823888597456m" data-normal="-0.9615352403114373m 0.21278429222770617m 0.17370327176072578m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Cerebellum</div></button>
+            <button class="Hotspot" slot="hotspot-6" data-position="0.03561092628768853m -0.40450652388675457m 0.10613543347423238m" data-normal="0.33074916528989384m -0.2617948315333186m -0.9066799081497726m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Spinal Cord</div></button>
+            <button class="Hotspot" slot="hotspot-7" data-position="0.33795697175944794m -0.1431470172499248m -0.29060595970328085m" data-normal="0.5551556983242859m -0.6075825585572661m -0.5680190006989915m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Temporal lobe</div></button>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+        <!-- MODEL 11 — Bull Skull Anatomy -->
+        <div class="ar-card">
+          <div class="card-label">Bull Skull Anatomy</div>
+          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            src="Bull_skull_anatomy\Bull_skull_anatomy.glb"
+            ios-src="Bull_skull_anatomy\Bull_skull_anatomy.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="Bull_skull_anatomy\poster.png"
+            shadow-intensity="1" auto-rotate>
+            <button class="Hotspot" slot="hotspot-1" data-position="-0.05031636658704808m -0.13922835793832883m -0.1459025565052704m" data-normal="0.944234285247329m -0.09079359148144113m -0.3165093020897915m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Maxilla</div></button>
+            <button class="Hotspot" slot="hotspot-2" data-position="-0.058154335175285565m -0.009341331565864808m -0.267659967987091m" data-normal="0.4594960194436053m -0.3679224473349473m -0.8083912919264685m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Zygomatic / Malar</div></button>
+            <button class="Hotspot" slot="hotspot-3" data-position="-0.06656986152482086m -0.1508924609671407m -0.028271973288865992m" data-normal="-0.33711738244689277m -0.0727649021769384m 0.9386464400738631m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Nasal bone</div></button>
+            <button class="Hotspot" slot="hotspot-4" data-position="-0.06957312612099575m 0.13677293431233084m -0.05953371482761005m" data-normal="0.586420688574553m 0.21271968884343093m 0.781576042359348m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Frontal bone</div></button>
+            <button class="Hotspot" slot="hotspot-5" data-position="-0.026643742071865484m -0.3585446893566049m -0.07444212672893014m" data-normal="0.8255290170791906m -0.11258617594372457m 0.553015546749487m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Premaxilla</div></button>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+        <!-- MODEL 12 — Coronavirus -->
+        <div class="ar-card">
+          <div class="card-label">Coronavirus Structure</div>
+          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            src="coronavirus\coronavirus.glb"
+            ios-src="coronavirus\coronavirus.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="coronavirus\poster.png"
+            shadow-intensity="1" auto-rotate>
+            <button class="Hotspot" slot="hotspot-1" data-position="1.0049703697870276m 0.20540112034071023m 0.5511447284369378m" data-normal="0.5905367487045431m 0.5740984957235464m 0.5671659947823287m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Glycoprotein spike</div></button>
+            <button class="Hotspot" slot="hotspot-2" data-position="-0.33928536129521114m 0.5019286094586256m 0.8237755268651187m" data-normal="-0.9565488572212842m -0.16820848607643193m 0.238160007055194m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Hemagglutinin esterase (HE)</div></button>
+            <button class="Hotspot" slot="hotspot-3" data-position="0.6675033566498979m 0.71998138187586m -0.18621909640830547m" data-normal="0.6692987489416131m 0.7238318657215448m -0.16765027536887345m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Envelope</div></button>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+        <!-- MODEL 13 — Human Skull -->
+        <div class="ar-card">
+          <div class="card-label">Human Skull</div>
+          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            src="human_skull\human_skull.glb"
+            ios-src="human_skull\human_skull.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="human_skull\poster.png"
+            shadow-intensity="1" auto-rotate>
+            <button class="Hotspot" slot="hotspot-1" data-position="10.982592288472157m 29.532018793136604m -6.52165378734907m" data-normal="0.7961681177042094m -0.23822353233062535m -0.5562066855003236m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Sphenoid</div></button>
+            <button class="Hotspot" slot="hotspot-2" data-position="4.328388935046477m 32.16994281824043m -12.891645487295277m" data-normal="0.4937940654089042m 0.038118240880195824m -0.8687430118735611m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Temporal</div></button>
+            <button class="Hotspot" slot="hotspot-3" data-position="-3.976517379531593m 29.663401701567338m -14.450965582264951m" data-normal="-0.3623072965740636m -0.3321783719824129m -0.8708564474333915m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Occipital</div></button>
+            <button class="Hotspot" slot="hotspot-4" data-position="0.7563436868032754m 39.62227192185718m -13.68831541691726m" data-normal="0.13176513216660918m 0.4325132954428592m -0.8919474195322694m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Parietal</div></button>
+            <button class="Hotspot" slot="hotspot-5" data-position="11.78897005634068m 41.92433997161476m 0.573300325510111m" data-normal="0.6186702688264137m 0.760208099800588m 0.19831980099786428m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Frontal</div></button>
+            <button class="Hotspot" slot="hotspot-6" data-position="4.361659668471937m 18.560340099171256m 5.867294309559238m" data-normal="-0.32038510581005325m 0.02595098789878182m 0.9469318508753195m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Mandible</div></button>
+            <button class="Hotspot" slot="hotspot-7" data-position="12.412324962788576m 24.36526502473268m 4.548822697012797m" data-normal="0.5852237689746322m 0.039949338585783055m 0.8098871468134836m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Womer</div></button>
+            <button class="Hotspot" slot="hotspot-8" data-position="14.550295105083007m 28.948987259556006m 5.94293512886264m" data-normal="0.7439418467219845m -0.37038411840476926m 0.5562069161107271m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Nasal</div></button>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+        <!-- MODEL 14 — T-Rex Skull -->
+        <div class="ar-card">
+          <div class="card-label">T-Rex Skull</div>
+          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            src="T_rex_skull\T_rex_skull .glb"
+            ios-src="T_rex_skull\T_rex_skull.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="T_rex_skull\poster.png"
+            shadow-intensity="1" auto-rotate>
+            <button class="Hotspot" slot="hotspot-1" data-position="0.13583525014539832m -0.36779890214950395m 0.2402604888441164m" data-normal="0.9892855736312617m 0.0960229080445122m 0.1099711550168537m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Dentary</div></button>
+            <button class="Hotspot" slot="hotspot-2" data-position="0.2646322897181521m -0.2594295706407692m -0.23844465035524354m" data-normal="0.9687779978520995m -0.15591707648293765m 0.19276684398176816m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Angular</div></button>
+            <button class="Hotspot" slot="hotspot-3" data-position="0.2521718847894585m -0.08882508987069462m -0.19588836497251522m" data-normal="0.8032607228593119m 0.5159673475673718m 0.29757336466126577m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Surangular</div></button>
+            <button class="Hotspot" slot="hotspot-4" data-position="-0.014182106684381024m 0.1785458681453761m 0.5820966631061975m" data-normal="0.061802110603154714m 0.4856516866337968m 0.8719649869087313m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Premaxilla</div></button>
+            <button class="Hotspot" slot="hotspot-5" data-position="0.17002138837604264m 0.11799222703109752m 0.2761398136394492m" data-normal="0.8522047108123812m 0.4738461651596506m -0.22184891848435662m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Postorbital</div></button>
+            <button class="Hotspot" slot="hotspot-6" data-position="0.13746766886521122m 0.20429421771050832m -0.12781680967148246m" data-normal="0.9020874324464251m -0.42951554032870704m 0.04188871970298942m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Orbit</div></button>
+            <button class="Hotspot" slot="hotspot-7" data-position="-0.06169307943759361m 0.33085162608980023m 0.09928382450767692m" data-normal="-0.4124398072466496m 0.9098122140963653m 0.04620758032418909m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Parietal</div></button>
+            <button class="Hotspot" slot="hotspot-8" data-position="-0.2318717657231697m 0.41658971214374474m -0.2342263549893848m" data-normal="-0.6676694974677143m 0.699698083528136m 0.2542440442926117m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Exoccipital</div></button>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+        <!-- ↓↓↓ ADD NEW BIOLOGY MODELS HERE ↓↓↓ -->
+
+      </div><!-- end Biology grid -->
+    </div><!-- end Biology category -->
+
+<!-- 
+     ================================================================
+      ★  HOW TO ADD A BRAND NEW CATEGORY  ★
+      ================================================================
+      1. Copy the block below (remove the comment markers *** and -->
+      <!-- 2. Change "cat-newsubject" class name (e.g. "cat-physics").
+      3. Add the matching color in styles.css — find the .cat-biology
+         rule and copy it, changing the color values.
+      4. Add your model cards inside .main-structur using the template
+         at the top of this file.
+
+      <div class="category-block">
+        <div class="category-tag cat-newsubject">⬡ New Subject</div>
+        <div class="main-structur">
+
+          ADD NEW MODELS HERE
+
+        </div>
+      </div>
+      ================================================================ --> 
+
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img class="SAR" src="SAR.png" alt="SAR logo">
+          <!-- <span class="footer-wordmark">SAR</span> -->
+        </div>
+        <p class="footer-tagline">Scan · Augment · Reality</p>
+        <p class="footer-copy">Open source. Free for students. Always.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+
+    <script>
+      // Scroll-reveal animation for cards as they enter the viewport
+      const cards = document.querySelectorAll('.ar-card');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add('visible'), i * 70);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      cards.forEach(c => observer.observe(c));
+
+      // Progress bar loader for each model-viewer
+      document.querySelectorAll('model-viewer').forEach(mv => {
+        const bar    = mv.querySelector('.progress-bar');
+        const update = mv.querySelector('.update-bar');
+        mv.addEventListener('progress', e => {
+          const p = e.detail.totalProgress * 100;
+          if (update) update.style.width = p + '%';
+          if (bar && p < 100)  bar.classList.remove('hide');
+          if (bar && p >= 100) setTimeout(() => bar.classList.add('hide'), 300);
+        });
+      });
+    </script>
+
+  </body>
+</html>

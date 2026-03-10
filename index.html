@@ -12,14 +12,10 @@
 
     <div class="noise"></div>
 
-    <!-- ============================================================
-         NAV — Change the site name/logo here
-         ============================================================ -->
     <header>
       <nav>
         <div class="nav-brand">
           <img class="SAR" src="SAR.png" alt="SAR logo">
-          <!-- <span class="nav-wordmark">SAR</span> -->
         </div>
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
@@ -33,9 +29,6 @@
       </nav>
     </header>
 
-    <!-- ============================================================
-         HERO — Change the heading and description text here
-         ============================================================ -->
     <section class="hero">
       <div class="hero-bg-grid"></div>
       <div class="t-text">
@@ -66,85 +59,14 @@
     </div>
 
 
-    <!-- ================================================================
-      ★  HOW TO ADD A NEW 3D MODEL  ★
-      ================================================================
-
-      STEP 1 — Find the right category block below (Engineering,
-               Astronomy, Biology) or create a new one (see bottom).
-
-      STEP 2 — Inside that category's <div class="main-structur">,
-               look for the comment that says:
-               "ADD NEW ___ MODELS HERE"
-               and paste the following template just above it:
-
-      ┌──────────────────────────────────────────────────────────────┐
-      │  <div class="ar-card">                                       │
-      │    <div class="card-label">YOUR MODEL NAME</div>             │
-      │    <!-- ★ TAP-TO-INTERACT OVERLAY — always include this -->  
-      <!--  
-      │    <div class="interact-overlay">                            │
-      │      <button class="interact-btn">⟳ Tap to Interact</button>│
-      │    </div>                                                     │
-      │    <model-viewer                                             │
-      │      src="YOUR_FOLDER/YOUR_FILE.glb"                        │
-      │      ios-src="YOUR_FOLDER/YOUR_FILE.usdz"                   │
-      │      ar                                                      │
-      │      ar-modes="webxr scene-viewer quick-look"               │
-      │      camera-controls                                         │
-      │      tone-mapping="neutral"                                  │
-      │      poster="YOUR_FOLDER/poster.png"                        │
-      │      shadow-intensity="1"                                    │
-      │      auto-rotate>                                            │
-      │                                                              │
-      │       OPTIONAL: Add hotspot annotation buttons.         │
-      │           Get position/normal values from:                   │
-      │           https://modelviewer.dev/editor                     │
-      │                                                              │
-      │      <button class="Hotspot"                                │
-      │        slot="hotspot-1"                                      │
-      │        data-position="X Y Z"                                │
-      │        data-normal="X Y Z"                                   │
-      │        data-visibility-attribute="visible">                  │
-      │        <div class="HotspotAnnotation">Label</div>           │
-      │      </button>                                               │
-                                                          
-      │                                                              │
-      │      <div class="progress-bar hide" slot="progress-bar">    │
-      │        <div class="update-bar"></div>                        │
-      │      </div>                                                  │
-      │      <button slot="ar-button" class="ar-button">            │
-      │        View in your space                                    │
-      │      </button>                                               │
-      │      <div id="ar-prompt">                                    │
-      │        <img src="ar_hand_prompt.png" alt="ar prompt">       │
-      │      </div>                                                  │
-      │    </model-viewer>                                           │
-      │  </div>                                                      │
-      └──────────────────────────────────────────────────────────────┘ -->
-
-      <!-- STEP 3 — Place your .glb, .usdz, and poster.png files inside a
-               folder in your project root.
-               Example: /solar_system/solar_system.glb
-
-      STEP 4 — Done! The card appears automatically in the grid.
-
-      ================================================================ --> 
-
-
-    <!-- ================================================================
-         CATEGORY: ENGINEERING
-         Current models: Lamborghini, Orthographic Part, Bolt Cutters,
-                         Gear, Planetary Gear System
-         ================================================================ -->
     <div class="category-block">
       <div class="category-tag cat-engineering">⚙ Engineering</div>
       <div class="main-structur">
 
-        <!-- MODEL 01 — Lamborghini Aventador -->
+      
         <div class="ar-card">
           <div class="card-label">Lamborghini Aventador</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+        
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -161,10 +83,9 @@
           </model-viewer>
         </div>
 
-        <!-- MODEL 02 — Orthographic Part -->
         <div class="ar-card">
           <div class="card-label">Orthographic Part</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+   
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -181,10 +102,9 @@
           </model-viewer>
         </div>
 
-        <!-- MODEL 03 — Bolt Cutters -->
+
         <div class="ar-card">
           <div class="card-label">Bolt Cutters</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -201,10 +121,8 @@
           </model-viewer>
         </div>
 
-        <!-- MODEL 04 — Gear -->
         <div class="ar-card">
           <div class="card-label">Gear Anatomy</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -225,10 +143,10 @@
           </model-viewer>
         </div>
 
-        <!-- MODEL 05 — Planetary Gear System -->
+
         <div class="ar-card">
           <div class="card-label">Planetary Gear System</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -248,24 +166,13 @@
           </model-viewer>
         </div>
 
-        <!-- ↓↓↓ ADD NEW ENGINEERING MODELS HERE ↓↓↓ -->
-
-      </div><!-- end Engineering grid -->
-    </div><!-- end Engineering category -->
-
-
-    <!-- ================================================================
-         CATEGORY: ASTRONOMY
-         Current models: Moon, Mars, Mars Curiosity Rover
-         ================================================================ -->
     <div class="category-block">
       <div class="category-tag cat-astronomy">✦ Astronomy</div>
       <div class="main-structur">
 
-        <!-- MODEL 06 — The Moon -->
         <div class="ar-card">
           <div class="card-label">The Moon</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -289,10 +196,10 @@
           </model-viewer>
         </div>
 
-        <!-- MODEL 07 — Mars -->
+    
         <div class="ar-card">
           <div class="card-label">Mars</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -309,10 +216,9 @@
           </model-viewer>
         </div>
 
-        <!-- MODEL 08 — Mars Curiosity Rover -->
         <div class="ar-card">
           <div class="card-label">Mars Curiosity Rover</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -337,25 +243,15 @@
           </model-viewer>
         </div>
 
-        <!-- ↓↓↓ ADD NEW ASTRONOMY MODELS HERE ↓↓↓ -->
-
-      </div><!-- end Astronomy grid -->
-    </div><!-- end Astronomy category -->
 
 
-    <!-- ================================================================
-         CATEGORY: BIOLOGY
-         Current models: Elephant Bone Structure, Human Brain, Bull Skull,
-                         Coronavirus, Human Skull, T-Rex Skull
-         ================================================================ -->
     <div class="category-block">
       <div class="category-tag cat-biology">⬡ Biology</div>
       <div class="main-structur">
 
-        <!-- MODEL 09 — Elephant Bone Structure -->
         <div class="ar-card">
           <div class="card-label">Elephant Bone Structure</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+ 
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -382,10 +278,10 @@
           </model-viewer>
         </div>
 
-        <!-- MODEL 10 — Human Brain Anatomy -->
+
         <div class="ar-card">
           <div class="card-label">Human Brain Anatomy</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+      
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -408,10 +304,9 @@
           </model-viewer>
         </div>
 
-        <!-- MODEL 11 — Bull Skull Anatomy -->
         <div class="ar-card">
           <div class="card-label">Bull Skull Anatomy</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -433,10 +328,10 @@
           </model-viewer>
         </div>
 
-        <!-- MODEL 12 — Coronavirus -->
+
         <div class="ar-card">
           <div class="card-label">Coronavirus Structure</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+    
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -456,10 +351,9 @@
           </model-viewer>
         </div>
 
-        <!-- MODEL 13 — Human Skull -->
         <div class="ar-card">
           <div class="card-label">Human Skull</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -484,10 +378,10 @@
           </model-viewer>
         </div>
 
-        <!-- MODEL 14 — T-Rex Skull -->
+
         <div class="ar-card">
           <div class="card-label">T-Rex Skull</div>
-          <!-- ★ TAP-TO-INTERACT OVERLAY — do not remove. Managed by script.js -->
+    
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
@@ -512,39 +406,12 @@
           </model-viewer>
         </div>
 
-        <!-- ↓↓↓ ADD NEW BIOLOGY MODELS HERE ↓↓↓ -->
 
-      </div><!-- end Biology grid -->
-    </div><!-- end Biology category -->
-
-<!-- 
-     ================================================================
-      ★  HOW TO ADD A BRAND NEW CATEGORY  ★
-      ================================================================
-      1. Copy the block below (remove the comment markers *** and -->
-      <!-- 2. Change "cat-newsubject" class name (e.g. "cat-physics").
-      3. Add the matching color in styles.css — find the .cat-biology
-         rule and copy it, changing the color values.
-      4. Add your model cards inside .main-structur using the template
-         at the top of this file.
-
-      <div class="category-block">
-        <div class="category-tag cat-newsubject">⬡ New Subject</div>
-        <div class="main-structur">
-
-          ADD NEW MODELS HERE
-
-        </div>
-      </div>
-      ================================================================ --> 
-
-
-    <!-- FOOTER -->
     <footer>
       <div class="footer-inner">
         <div class="footer-brand">
           <img class="SAR" src="SAR.png" alt="SAR logo">
-          <!-- <span class="footer-wordmark">SAR</span> -->
+  
         </div>
         <p class="footer-tagline">Scan · Augment · Reality</p>
         <p class="footer-copy">Open source. Free for students. Always.</p>
@@ -555,7 +422,7 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
 
     <script>
-      // Scroll-reveal animation for cards as they enter the viewport
+
       const cards = document.querySelectorAll('.ar-card');
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, i) => {

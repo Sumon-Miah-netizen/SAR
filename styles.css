@@ -548,8 +548,8 @@ model-viewer > #ar-prompt > img { animation: circle 4s linear infinite; }
   align-items: center;
   justify-content: center;
  
-  background: rgba(8, 11, 16, 0.20);
-  backdrop-filter: blur(1px);
+    background: rgba(8, 11, 16, 0.2);
+  backdrop-filter: blur(0.7px);
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 

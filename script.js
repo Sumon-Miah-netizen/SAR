@@ -1,15 +1,4 @@
-// ============================================================
-//  SAR — script.js
-// ============================================================
 
-
-// ============================================================
-//  PROGRESS BAR
-//  Handles the loading bar for each <model-viewer>.
-//  — This targets only the first model-viewer (original behaviour).
-//  — The inline <script> in index.html handles all other cards.
-//  — Do not remove: required for the first card to load correctly.
-// ============================================================
 const onProgress = (event) => {
   const progressBar = event.target.querySelector('.progress-bar');
   const updatingBar = event.target.querySelector('.update-bar');
@@ -25,27 +14,7 @@ const firstViewer = document.querySelector('model-viewer');
 if (firstViewer) firstViewer.addEventListener('progress', onProgress);
 
 
-// ============================================================
-//  TAP-TO-INTERACT  (scroll fix for mobile)
-// ============================================================
-//  WHAT IT DOES:
-//    — On page load, camera-controls on every model-viewer is
-//      disabled so the page scrolls freely on mobile.
-//    — When the student taps "Tap to Interact", camera-controls
-//      is re-enabled for ONLY that card and the overlay hides.
-//    — A small "✕ Lock" button appears so they can disable it
-//      again and scroll away.
-//    — The AR "View in your space" button is NEVER affected.
-//
-//  HOW TO CHANGE BUTTON LABELS:
-//    — "Tap to Interact" text → change in index.html inside
-//      <button class="interact-btn">...</button>
-//    — "✕ Lock" text          → change LOCK_LABEL below
-//
-//  HOW TO CHANGE BEHAVIOUR:
-//    — Auto-lock after scrolling away: set AUTO_LOCK = true/false
-//    — Auto-lock delay in ms:          set AUTO_LOCK_DELAY
-// ============================================================
+
 
 const LOCK_LABEL      = '✕ Lock'; // ← change lock button text here
 const AUTO_LOCK       = true;      // ← true = auto-lock when card leaves viewport

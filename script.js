@@ -75,38 +75,3 @@ function deactivateCard(card, mv) {
 }
 
 document.addEventListener('DOMContentLoaded', initTapToInteract);
-
-
-
-const LAZY_MARGIN = '200px'; 
-
-function initLazyLoad() {
- 
-  const lazyViewers = document.querySelectorAll('model-viewer[data-src]');
-
-  if (lazyViewers.length === 0) {
-   
-    console.warn('SAR lazy load: no model-viewers with data-src found. ' +
-      'Did you rename src= to data-src= in index.html?');
-    return;
-  }
-
-  const lazyObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const mv = entry.target;
-        
-        mv.setAttribute('src', mv.dataset.src);
-        mv.removeAttribute('data-src');
-
-        lazyObserver.unobserve(mv);
-      }
-    });
-  }, {
-
-
-    rootMargin: LAZY_MARGIN
-  });
-
-  lazyViewers.forEach(mv => lazyObserver.observe(mv));
-}

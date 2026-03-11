@@ -1,7 +1,3 @@
-/* ============================================
-   SAR — Scan. Augment. Reality.
-   styles.css
-   ============================================ */
 
 :root {
   --bg:        #080b10;
@@ -9,9 +5,9 @@
   --surface2:  #141820;
   --border:    rgba(255, 255, 255, 0.07);
   --border-hi: rgba(255, 255, 255, 0.14);
-  --accent:    #e8f55a;       /* electric yellow-green */
-  --accent2:   #5af5c4;       /* mint */
-  --accent3:   #f55a5a;       /* coral */
+  --accent:    #e8f55a;       
+  --accent2:   #5af5c4;       
+  --accent3:   #f55a5a;       
   --text:      #dde3ee;
   --muted:     #5a6478;
   --font-display: 'Bebas Neue', sans-serif;
@@ -19,7 +15,7 @@
   --font-mono:    'JetBrains Mono', monospace;
 }
 
-/* ---- RESET ---- */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { height: 100%; scroll-behavior: smooth; }
@@ -37,7 +33,7 @@ body {
 li { list-style: none; }
 a  { text-decoration: none; }
 
-/* ---- NOISE OVERLAY ---- */
+
 .noise {
   position: fixed;
   inset: 0;
@@ -47,9 +43,7 @@ a  { text-decoration: none; }
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* ============================================
-   NAV
-   ============================================ */
+
 header {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -149,9 +143,6 @@ nav {
   color: var(--muted);
 }
 
-/* ============================================
-   HERO
-   ============================================ */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -305,9 +296,6 @@ nav {
 
 @keyframes scanline { to { left: 100%; } }
 
-/* ============================================
-   SECTION HEADER
-   ============================================ */
 .section-header {
   display: flex;
   align-items: center;
@@ -330,9 +318,7 @@ nav {
   white-space: nowrap;
 }
 
-/* ============================================
-   CATEGORY BLOCKS
-   ============================================ */
+
 .category-block {
   padding: 0 2.5rem 4rem;
 }
@@ -368,9 +354,6 @@ nav {
   background: rgba(245,90,90,0.05);
 }
 
-/* ============================================
-   MODEL GRID
-   ============================================ */
 .main-structur {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -378,9 +361,6 @@ nav {
   width: 100%;
 }
 
-/* ============================================
-   AR CARDS
-   ============================================ */
 .ar-card {
   position: relative;
   background: var(--surface);
@@ -425,14 +405,6 @@ nav {
   flex-shrink: 0;
 }
 
-/* individual AR sizes - all now flow in grid so just height matters */
-
-  /* sizes handled by grid + model-viewer height below */
-
-
-/* ============================================
-   MODEL VIEWER
-   ============================================ */
 :not(:defined) > * { display: none; }
 
 model-viewer {
@@ -442,9 +414,7 @@ model-viewer {
   display: block;
 }
 
-/* ============================================
-   PROGRESS BAR
-   ============================================ */
+
 .progress-bar {
   display: block;
   width: 40%;
@@ -472,9 +442,7 @@ model-viewer {
   transition: width 0.3s;
 }
 
-/* ============================================
-   AR BUTTON
-   ============================================ */
+
 .ar-button {
   background-image: url(ar_icon.png);
   background-repeat: no-repeat;
@@ -510,9 +478,7 @@ model-viewer {
 .ar-button:focus-visible { outline: 1px solid var(--accent2); }
 .ar-button:active { background-color: rgba(90,245,196,0.2); }
 
-/* ============================================
-   AR PROMPT ANIMATION
-   ============================================ */
+
 @keyframes circle {
   from { transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg); }
   to   { transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg); }
@@ -534,9 +500,7 @@ model-viewer > #ar-prompt {
 model-viewer[ar-status="session-started"] > #ar-prompt { display: block; }
 model-viewer > #ar-prompt > img { animation: circle 4s linear infinite; }
 
-/* ============================================
-   HOTSPOTS
-   ============================================ */
+
 .Hotspot {
   background: rgba(8,11,16,0.85);
   border: 1px solid rgba(90,245,196,0.5);
@@ -563,38 +527,31 @@ model-viewer > #ar-prompt > img { animation: circle 4s linear infinite; }
   white-space: nowrap;
 }
 
-/* ============================================
-   TAP-TO-INTERACT OVERLAY
-   — Sits on top of model-viewer, fades out when tapped.
-   — To change the button look: edit .interact-btn styles below.
-   — To change overlay color/opacity: edit .interact-overlay background.
-   — The .active class is toggled by script.js — do not remove it.
-   ============================================ */
 
-/* Full overlay that blocks touch scroll from reaching the 3D model */
+
 .interact-overlay {
   position: absolute;
-  /* Sits below the card-label (which is ~44px tall) */
+  
   top: 44px;
   left: 0; right: 0; bottom: 0;
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Semi-transparent dark layer over the model */
+  
   background: rgba(8, 11, 16, 0.2);
   backdrop-filter: blur(0.7px);
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* When the card is active (user tapped), hide the overlay */
+
 .ar-card.active .interact-overlay {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-/* The "Tap to Interact" button */
+
 .interact-btn {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -605,7 +562,7 @@ model-viewer > #ar-prompt > img { animation: circle 4s linear infinite; }
   border: none;
   padding: 0.65rem 1.4rem;
   cursor: pointer;
-  /* Subtle pulse to draw attention */
+ 
   animation: interact-pulse 2.5s ease-in-out infinite;
   transition: background 0.2s, transform 0.2s;
 }
@@ -615,11 +572,10 @@ model-viewer > #ar-prompt > img { animation: circle 4s linear infinite; }
   transform: scale(1.04);
 }
 
-/* Lock / exit button — appears when model is active so user can scroll away */
-/* To change the lock icon or text: edit the JS in script.js (initTapToInteract) */
+
 .interact-lock-btn {
   position: absolute;
-  /* ★ To move the lock button: change top/right values below */
+
   top: 52px;
   right: 8px;
   z-index: 11;
@@ -632,7 +588,7 @@ model-viewer > #ar-prompt > img { animation: circle 4s linear infinite; }
   border: 1px solid var(--border);
   padding: 0.3rem 0.6rem;
   cursor: pointer;
-  display: none;             /* hidden by default */
+  display: none;           
   transition: color 0.2s, border-color 0.2s;
   backdrop-filter: blur(6px);
 }
@@ -642,7 +598,6 @@ model-viewer > #ar-prompt > img { animation: circle 4s linear infinite; }
   border-color: var(--accent3);
 }
 
-/* Only show the lock button when the card is active */
 .ar-card.active .interact-lock-btn {
   display: block;
 }
@@ -652,9 +607,7 @@ model-viewer > #ar-prompt > img { animation: circle 4s linear infinite; }
   50%       { box-shadow: 0 0 0 8px rgba(90, 245, 196, 0); }
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+
 footer {
   border-top: 1px solid var(--border);
   padding: 3rem 2.5rem;
@@ -697,17 +650,13 @@ footer {
   font-weight: 300;
 }
 
-/* ============================================
-   ANIMATIONS
-   ============================================ */
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: none; }
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
+
 @media (max-width: 768px) {
   nav { padding: 0 1.2rem; }
   .nav-indicator { display: none; }

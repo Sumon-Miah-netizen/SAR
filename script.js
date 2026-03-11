@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', initTapToInteract);
 
 
 
-const LAZY_MARGIN = '400px'; 
+const LAZY_MARGIN = '200px'; 
 
 function initLazyLoad() {
  

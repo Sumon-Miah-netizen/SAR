@@ -72,66 +72,6 @@ function deactivateCard(card, mv) {
   card.classList.remove('active');
 }
 
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  initTapToInteract();
-  initLazyLoad();
-});
-const LOAD_AHEAD_PX       = 300;  
-const INITIAL_LOAD_DELAY  = 800;  
-const SCROLL_THROTTLE     = 150;  
-
-function initLazyLoad() {
- 
-  let lazyViewers = Array.from(document.querySelectorAll('model-viewer[data-src]'));
-
-  if (lazyViewers.length === 0) {
-    console.warn(
-      'SAR lazy load: no model-viewers with data-src found.\n' +
-      'Did you rename src= to data-src= in index.html?\n' +
-      'Also check that all paths use forward slashes / not backslashes \\.'
-    );
-    return;
-  }
-
-  
-  function loadIfVisible() {
-    const viewportBottom = window.innerHeight + window.scrollY + LOAD_AHEAD_PX;
-
-    lazyViewers = lazyViewers.filter(mv => {
-      const rect = mv.getBoundingClientRect();
-      const mvTop = rect.top + window.scrollY;
-
-      if (mvTop <= viewportBottom) {
-        
-        const safeSrc = mv.dataset.src.replace(/\\/g, '/');
-        mv.setAttribute('src', safeSrc);
-        mv.removeAttribute('data-src');
-        return false; 
-      }
-      return true; 
-    });
-
-   
-    if (lazyViewers.length === 0) {
-      window.removeEventListener('scroll', onScroll);
-    }
-  }
-
- 
-  let scrollTimer = null;
-  function onScroll() {
-    if (scrollTimer) return;
-    scrollTimer = setTimeout(() => {
-      loadIfVisible();
-      scrollTimer = null;
-    }, SCROLL_THROTTLE);
-  }
-
-  
-  setTimeout(loadIfVisible, INITIAL_LOAD_DELAY);
-
+document.addEventListener('DOMContentLoaded', initTapToInteract);
   window.addEventListener('scroll', onScroll, { passive: true });
 }

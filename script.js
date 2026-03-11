@@ -73,5 +73,3 @@ function deactivateCard(card, mv) {
 }
 
 document.addEventListener('DOMContentLoaded', initTapToInteract);
-  window.addEventListener('scroll', onScroll, { passive: true });
-}

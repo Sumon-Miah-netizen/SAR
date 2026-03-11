@@ -66,24 +66,82 @@
 
       
         <div class="ar-card">
-          <div class="card-label">Lamborghini Aventador</div>
-         
+          <div class="card-label">Mars Curiosity Rover</div>
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
           <model-viewer
-            data-src="Lamborginhi_Aventador_test/Lamborginhi_Aventador_test.glb"
-            ios-src="Lamborginhi_Aventador_test/Lamborginhi_Aventador_test.usdz"
+            data-src="Mars_Curiosity_Rover\Mars_Curiosity_Rover.glb"
+            ios-src="Mars_Curiosity_Rover/Mars_Curiosity_Rover.usdz"
             ar ar-modes="webxr scene-viewer quick-look"
             camera-controls tone-mapping="neutral"
-            poster="Lamborginhi_Aventador_test/poster.png"
+            poster="Mars_Curiosity_Rover/poster.png"
             shadow-intensity="1" auto-rotate>
+            <button class="Hotspot" slot="hotspot-1" data-position="-0.4506194810013565m 2.2104937250056764m 0.6085396039740741m" data-normal="0m 1m 0m" data-visibility-attribute="visible"><div class="HotspotAnnotation">ChemCam</div></button>
+            <button class="Hotspot" slot="hotspot-2" data-position="-0.6070079327195823m 1.9710507373193666m 0.8192893608938148m" data-normal="-0.997809904657154m -0.000003275050124371988m 0.06614676225905128m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Mastcam</div></button>
+            <button class="Hotspot" slot="hotspot-3" data-position="-0.7063850300152501m 1.5352776501135943m 0.6321501369298093m" data-normal="-0.48958109383398196m -0.3826822307320726m 0.7834951581485697m" data-visibility-attribute="visible"><div class="HotspotAnnotation">REMS</div></button>
+            <button class="Hotspot" slot="hotspot-4" data-position="-0.47546371744553523m 1.7836160498877138m -1.2363300168293594m" data-normal="0.19509443742258678m -2.3481298710135613e-7m -0.9807844617889852m" data-visibility-attribute="visible"><div class="HotspotAnnotation">RUHF Antenna</div></button>
+            <button class="Hotspot" slot="hotspot-5" data-position="0.007080815455289546m 1.4814678882589845m -1.4279203855169589m" data-normal="-3.701296288939615e-7m 0.500001816187584m -0.8660243552054299m" data-visibility-attribute="visible"><div class="HotspotAnnotation">MMRTG</div></button>
+            <button class="Hotspot" slot="hotspot-6" data-position="0.4153028120989696m 1.399664517319354m -0.24791553977896474m" data-normal="-5.653029741498647e-7m 0.9999999999998391m 4.945841303875482e-8m" data-visibility-attribute="visible"><div class="HotspotAnnotation">High Gain Antenna</div></button>
+            <button class="Hotspot" slot="hotspot-7" data-position="0.5003441012448293m 1.5558014725131375m -0.9707810733652174m" data-normal="0.12417267119807579m 0.6082226766782395m 0.7839938286121215m" data-visibility-attribute="visible"><div class="HotspotAnnotation">RLGA Antenna</div></button>
+            <button class="Hotspot" slot="hotspot-8" data-position="0.41320953021685447m 0.9435555509951886m 2.1173869893679127m" data-normal="-0.9659167242769141m 0.004873060444908363m 0.25880713870381655m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Robotic Arm</div></button>
             <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
             <button slot="ar-button" class="ar-button">View in your space</button>
             <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
           </model-viewer>
         </div>
 
+        
+<div class="ar-card">
+          <div class="card-label">Gear Anatomy</div>
+          
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            data-src="Gear\gear.glb"
+            ios-src="Gear\ImageToStl.com_gear.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="Gear\poster.png"
+            shadow-intensity="0.91" shadow-softness="0.5" auto-rotate>
+            <button class="Hotspot" slot="hotspot-1" data-position="0.04425783833475548m 0.012954706323061073m 0.08134563474189796m" data-normal="0.4792475044651091m -5.02763036415679e-7m 0.8776797989379228m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Top Land</div></button>
+            <button class="Hotspot" slot="hotspot-3" data-position="-0.06633507040500639m 0.009775162775733346m -0.04974062559505994m" data-normal="-0.8005421154710515m 4.4860195756930433e-7m -0.599276498251794m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Bottom Land</div></button>
+            <button class="Hotspot" slot="hotspot-5" data-position="-0.07832440105142868m 0.007379406251268223m -0.04650466885217278m" data-normal="0.05337977197909999m 5.720153146134609e-7m -0.9985742836379936m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Face</div></button>
+            <button class="Hotspot" slot="hotspot-6" data-position="0.08033299605014083m 0.007611275257247744m -0.022411010037545212m" data-normal="0.7197171701318145m -5.197095875625265e-7m 0.6942673800613008m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Flank</div></button>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+
+
+ <div class="ar-card">
+          <div class="card-label">Planetary Gear System</div>
+         
+          <div class="interact-overlay">
+            <button class="interact-btn">⟳ Tap to Interact</button>
+          </div>
+          <model-viewer
+            data-src="planetary gear\Planetary_Gear_System.gltf"
+            ios-src="planetary gear\Planetary_Gear_System.usdz"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="planetary gear\poster.png"
+            shadow-intensity="1" auto-rotate>
+            <button class="Hotspot" slot="hotspot-1" data-position="0.028734376622942086m 0.01244163869348728m 0.004999999888241291m" data-normal="-3.4448436352960845e-17m 4.35533230024573e-17m 1m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Ring Gear</div></button>
+            <button class="Hotspot" slot="hotspot-2" data-position="-0.01326257073980916m 0.022200298695265984m 0.004999999888241295m" data-normal="-2.2179999911289586e-16m -5.153533262688453e-16m 1m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Planet Gear</div></button>
+            <button class="Hotspot" slot="hotspot-3" data-position="0.0007880185299071717m 0.005767034112288454m 0.00499999988824129m" data-normal="6.979621336323284e-17m 1.0445180496014573e-16m 1m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Sun Gear</div></button>
+            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
+            <button slot="ar-button" class="ar-button">View in your space</button>
+            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
+          </model-viewer>
+        </div>
+
+
+        
+        
        
         <div class="ar-card">
           <div class="card-label">Orthographic Part</div>
@@ -124,47 +182,22 @@
           </model-viewer>
         </div>
 
-        
-        <div class="ar-card">
-          <div class="card-label">Gear Anatomy</div>
-          
-          <div class="interact-overlay">
-            <button class="interact-btn">⟳ Tap to Interact</button>
-          </div>
-          <model-viewer
-            data-src="Gear\gear.glb"
-            ios-src="Gear\ImageToStl.com_gear.usdz"
-            ar ar-modes="webxr scene-viewer quick-look"
-            camera-controls tone-mapping="neutral"
-            poster="Gear\poster.png"
-            shadow-intensity="0.91" shadow-softness="0.5" auto-rotate>
-            <button class="Hotspot" slot="hotspot-1" data-position="0.04425783833475548m 0.012954706323061073m 0.08134563474189796m" data-normal="0.4792475044651091m -5.02763036415679e-7m 0.8776797989379228m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Top Land</div></button>
-            <button class="Hotspot" slot="hotspot-3" data-position="-0.06633507040500639m 0.009775162775733346m -0.04974062559505994m" data-normal="-0.8005421154710515m 4.4860195756930433e-7m -0.599276498251794m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Bottom Land</div></button>
-            <button class="Hotspot" slot="hotspot-5" data-position="-0.07832440105142868m 0.007379406251268223m -0.04650466885217278m" data-normal="0.05337977197909999m 5.720153146134609e-7m -0.9985742836379936m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Face</div></button>
-            <button class="Hotspot" slot="hotspot-6" data-position="0.08033299605014083m 0.007611275257247744m -0.022411010037545212m" data-normal="0.7197171701318145m -5.197095875625265e-7m 0.6942673800613008m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Flank</div></button>
-            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
-            <button slot="ar-button" class="ar-button">View in your space</button>
-            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
-          </model-viewer>
-        </div>
+      
 
-        
-        <div class="ar-card">
-          <div class="card-label">Planetary Gear System</div>
+
+ <div class="ar-card">
+          <div class="card-label">Lamborghini Aventador</div>
          
           <div class="interact-overlay">
             <button class="interact-btn">⟳ Tap to Interact</button>
           </div>
           <model-viewer
-            data-src="planetary gear\Planetary_Gear_System.gltf"
-            ios-src="planetary gear\Planetary_Gear_System.usdz"
+            data-src="Lamborginhi_Aventador_test/Lamborginhi_Aventador_test.glb"
+            ios-src="Lamborginhi_Aventador_test/Lamborginhi_Aventador_test.usdz"
             ar ar-modes="webxr scene-viewer quick-look"
             camera-controls tone-mapping="neutral"
-            poster="planetary gear\poster.png"
+            poster="Lamborginhi_Aventador_test/poster.png"
             shadow-intensity="1" auto-rotate>
-            <button class="Hotspot" slot="hotspot-1" data-position="0.028734376622942086m 0.01244163869348728m 0.004999999888241291m" data-normal="-3.4448436352960845e-17m 4.35533230024573e-17m 1m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Ring Gear</div></button>
-            <button class="Hotspot" slot="hotspot-2" data-position="-0.01326257073980916m 0.022200298695265984m 0.004999999888241295m" data-normal="-2.2179999911289586e-16m -5.153533262688453e-16m 1m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Planet Gear</div></button>
-            <button class="Hotspot" slot="hotspot-3" data-position="0.0007880185299071717m 0.005767034112288454m 0.00499999988824129m" data-normal="6.979621336323284e-17m 1.0445180496014573e-16m 1m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Sun Gear</div></button>
             <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
             <button slot="ar-button" class="ar-button">View in your space</button>
             <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
@@ -229,32 +262,10 @@
         </div>
 
         
-        <div class="ar-card">
-          <div class="card-label">Mars Curiosity Rover</div>
-          <div class="interact-overlay">
-            <button class="interact-btn">⟳ Tap to Interact</button>
-          </div>
-          <model-viewer
-            data-src="Mars_Curiosity_Rover\Mars_Curiosity_Rover.glb"
-            ios-src="Mars_Curiosity_Rover/Mars_Curiosity_Rover.usdz"
-            ar ar-modes="webxr scene-viewer quick-look"
-            camera-controls tone-mapping="neutral"
-            poster="Mars_Curiosity_Rover/poster.png"
-            shadow-intensity="1" auto-rotate>
-            <button class="Hotspot" slot="hotspot-1" data-position="-0.4506194810013565m 2.2104937250056764m 0.6085396039740741m" data-normal="0m 1m 0m" data-visibility-attribute="visible"><div class="HotspotAnnotation">ChemCam</div></button>
-            <button class="Hotspot" slot="hotspot-2" data-position="-0.6070079327195823m 1.9710507373193666m 0.8192893608938148m" data-normal="-0.997809904657154m -0.000003275050124371988m 0.06614676225905128m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Mastcam</div></button>
-            <button class="Hotspot" slot="hotspot-3" data-position="-0.7063850300152501m 1.5352776501135943m 0.6321501369298093m" data-normal="-0.48958109383398196m -0.3826822307320726m 0.7834951581485697m" data-visibility-attribute="visible"><div class="HotspotAnnotation">REMS</div></button>
-            <button class="Hotspot" slot="hotspot-4" data-position="-0.47546371744553523m 1.7836160498877138m -1.2363300168293594m" data-normal="0.19509443742258678m -2.3481298710135613e-7m -0.9807844617889852m" data-visibility-attribute="visible"><div class="HotspotAnnotation">RUHF Antenna</div></button>
-            <button class="Hotspot" slot="hotspot-5" data-position="0.007080815455289546m 1.4814678882589845m -1.4279203855169589m" data-normal="-3.701296288939615e-7m 0.500001816187584m -0.8660243552054299m" data-visibility-attribute="visible"><div class="HotspotAnnotation">MMRTG</div></button>
-            <button class="Hotspot" slot="hotspot-6" data-position="0.4153028120989696m 1.399664517319354m -0.24791553977896474m" data-normal="-5.653029741498647e-7m 0.9999999999998391m 4.945841303875482e-8m" data-visibility-attribute="visible"><div class="HotspotAnnotation">High Gain Antenna</div></button>
-            <button class="Hotspot" slot="hotspot-7" data-position="0.5003441012448293m 1.5558014725131375m -0.9707810733652174m" data-normal="0.12417267119807579m 0.6082226766782395m 0.7839938286121215m" data-visibility-attribute="visible"><div class="HotspotAnnotation">RLGA Antenna</div></button>
-            <button class="Hotspot" slot="hotspot-8" data-position="0.41320953021685447m 0.9435555509951886m 2.1173869893679127m" data-normal="-0.9659167242769141m 0.004873060444908363m 0.25880713870381655m" data-visibility-attribute="visible"><div class="HotspotAnnotation">Robotic Arm</div></button>
-            <div class="progress-bar hide" slot="progress-bar"><div class="update-bar"></div></div>
-            <button slot="ar-button" class="ar-button">View in your space</button>
-            <div id="ar-prompt"><img src="ar_hand_prompt.png" alt="ar prompt"></div>
-          </model-viewer>
-        </div>
 
+
+
+        
     
 
       </div>
